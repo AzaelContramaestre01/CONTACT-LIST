@@ -5,7 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			contacts: null,
 			full_name: "",
 			email: "",
-			agenda_slug: "piterscl",
+			agenda_slug: "",
 			address: "",
 			phone: "",
 			deleteId: ""
@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Remember to use the scope: scope.state.store & scope.setState()
 			contactosAgenda: () => {
 				const store = getStore();
-				fetch("https://assets.breatheco.de/apis/fake/contact/agenda/piterscl", {
+				fetch("https://assets.breatheco.de/apis/fake/contact/agenda/DoIt", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"
@@ -52,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({
 							full_name: "",
 							email: "",
-							agenda_slug: "piterscl",
+							agenda_slug: "DoIt",
 							address: "",
 							phone: ""
 						});
